@@ -23,17 +23,17 @@ function Prime(num){
 
 function avge(nums) {
 
-var sum = 0;
-var count = 0;
+let sum = 0;
+let cnt = 0;
 
 for( let i = 0; i < nums; i++){
   if (Prime(i)) {
       sum += i;
-      count++;
+      cnt++;
   }
 }
 
-console.log(sum/count);
+console.log(sum/cnt);
 
 }
 avge(5);
