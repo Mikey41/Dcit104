@@ -1,39 +1,25 @@
 //Michael-Angelo Obeng-Konadu(10950757)
 //I Michael-Angelo Obeng-Konadu endorse this code.
 //Write a program to calculate the average of all prime numbers between 1 and n.
-function Prime(num){
-  if (num < 2){
-      return false;
-  }
-  if (num === 2){
-      return true;
-  }
-
-  for(let i = 2; i < num; i++){
-          if(num % i == 0){
-              return false;
-          }
-          else{
-              return true;
-          }
-  }
-
+function primeNumAverage(max)
+{
+    var store  = [], i, j, primes = []; var sum = 0; var avg;
+    for (i = 2; i <= max; ++i) 
+    {
+        if (!store [i]) 
+          {
+            primes.push(i);
+            for (j = i << 1; j <= max; j += i) 
+            {
+                store[j] = true;
+            }
+        }
+    }
+    for(let i = 0; i < primes.length; i++){
+        sum += primes[i]
+    }
+   avg = sum/primes.length;
+    return avg;
 }
 
-
-function avge(nums) {
-
-let sum = 0;
-let cnt = 0;
-
-for( let i = 0; i < nums; i++){
-  if (Prime(i)) {
-      sum += i;
-      cnt++;
-  }
-}
-
-console.log(sum/cnt);
-
-}
-avge(5);
+console.log(primeNumAverage(30));
