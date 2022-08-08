@@ -1,4 +1,7 @@
-function isPrime(num){
+//Michael-Angelo Obeng-Konadu(10950757)
+//I Michael-Angelo Obeng-Konadu endorse this code.
+//Write a program to calculate the average of all prime numbers between 1 and n.
+function Prime(num){
   if (num < 2){
       return false;
   }
@@ -18,13 +21,13 @@ function isPrime(num){
 }
 
 
-function average(nums) {
+function avge(nums) {
 
 var sum = 0;
 var count = 0;
 
 for( let i = 0; i < nums; i++){
-  if (isPrime(i)) {
+  if (Prime(i)) {
       sum += i;
       count++;
   }
@@ -33,4 +36,4 @@ for( let i = 0; i < nums; i++){
 console.log(sum/count);
 
 }
-average(5);
+avge(5);
